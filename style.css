@@ -12,6 +12,15 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  background: #aaa;
+  color: #fff;
+}
+
 header {
   width: 1000px;
   padding: 0 0 60px 0;
@@ -31,13 +40,16 @@ header h2 {
   font-weight: 100;
 }
 
-#menu {
-  width: 100px;
+nav {
+  width: 110px;
   margin: 0 60px 0 0;
   float: left;
 }
-#menu ul li {
+nav ul li {
   padding: 0 0 15px 0;
+}
+nav ul li a {
+  padding: 0 5px;
 }
 
 #main {
@@ -53,7 +65,11 @@ header h2 {
 #main ul li .thumbnail {
   width: 200px;
   height: 150px;
-  border: 1px dotted #ccc;
+  margin: 0 0 5px 0;
+}
+#main ul li .thumbnail img {
+  width: 200px;
+  height: 150px;
   margin: 0 0 10px 0;
 }
 #main ul li span {
