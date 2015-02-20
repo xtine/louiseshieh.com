@@ -7,6 +7,49 @@ body {
     font-weight: 100;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 ul {
   margin: 0 0 0 -30px;
   list-style: none;
@@ -16,39 +59,70 @@ a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
+a:hover, a:hover h1, a:hover h2, .active {
   background: #aaa;
   color: #fff;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 header {
   width: 1000px;
   padding: 0 0 60px 0;
   text-align: center;
+
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  -o-animation: fadein 1s;
 }
 header h1,
 header h2 {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  display: inline-block;
 }
 header h1 {
   font-size: 33px;
+  margin: 0 0 3px 0;
 }
 header h2 {
   font-size: 18px;
   font-weight: 100;
 }
 
+h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 5px 0;
+  margin: 0;
+}
+
 nav {
   width: 110px;
   margin: 0 60px 0 0;
   float: left;
+
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+  -o-animation: fadein 1s;
 }
 nav ul li {
   padding: 0 0 15px 0;
 }
-nav ul li a {
+nav ul li a, nav .active {
   padding: 0 5px;
 }
 
@@ -56,22 +130,45 @@ nav ul li a {
   width: 700px;
   margin: 0 0 70px 0;
   float: left;
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
 }
-#main ul li {
+#main ul.front {
+  margin: 0 0 0 -35px;
+}
+#main ul.front li {
   margin: 0 20px 30px 0;
   text-align: center;
   display: inline-block;
 }
-#main ul li .thumbnail {
+#main ul.front li .thumbnail {
   width: 200px;
   height: 150px;
   margin: 0 0 5px 0;
 }
-#main ul li .thumbnail img {
+#main ul.front li .thumbnail img {
   width: 200px;
   height: 150px;
   margin: 0 0 10px 0;
 }
-#main ul li span {
+#main ul.front li span {
   font-size: 13px;
+}
+#main ul {
+  margin: 15px 0 0 -40px;
+}
+#main ul li {
+  margin: 0 0 15px 0;
+}
+#main h3 {
+  padding: 0 0 15px 0;
+}
+#main p {
+  padding: 15px 0;
+}
+#main .video {
+  padding: 25px 0 0 0;
 }
