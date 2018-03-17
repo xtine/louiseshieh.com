@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!doctype html>
 <html>
   <head>
@@ -7,7 +9,7 @@
     <meta name="description" content="Louise Shieh">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
     <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,900" rel="stylesheet">
   </head>
 
