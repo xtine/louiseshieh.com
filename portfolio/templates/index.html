@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div class="content projects">
+      {% for project in projects %}
+        <div class="project">
+          <img src="{{ project.home_page_image.url }}" alt="{{ project.title }}">
+          <h2>{{ project.title }}</h2>
+        </div>
+      {% endfor %}
+      </div>
+{% endblock content %}

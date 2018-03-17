@@ -1,0 +1,17 @@
+{% extends "lockdown/base.html" %}
+
+{% block title %}Louise Shieh{% endblock %}
+
+{% block content %}
+<div id="lockdown">
+  <h2>Revamping.</h2>
+
+  {% if form %}
+  <form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <p><input type="submit" value="Preview" /></p>
+  </form>
+  {% endif %}
+
+</div>
+{% endblock %}

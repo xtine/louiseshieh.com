@@ -1,0 +1,12 @@
+bin
+lib
+
+.python-version
+
+db.sqlite3
+
+local_settings.py
+
+media
+
+.DS_Store
