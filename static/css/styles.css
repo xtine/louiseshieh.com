@@ -14,6 +14,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
+h2 {
+  color: #000000;
+  padding-bottom: 20px;
+}
+
 a {
   color: #000000;
   text-decoration: none;
@@ -82,11 +87,6 @@ nav li.current {
   text-align: center;
 }
 
-
-.project-detail h2 {
-  color: #000000;
-  padding-bottom: 20px;
-}
 
 .project-detail img {
   max-width: 100%;
