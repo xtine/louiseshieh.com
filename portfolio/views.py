@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from .models import Project, AboutPage
 
@@ -14,6 +14,16 @@ def home(request):
         'projects': projects,
         'page': page_name
     })
+
+
+def project(request, name):
+    name = name.replace('-', ' ')
+    project = get_object_or_404(Project, title__iexact=name)
+
+    return render(request, 'project.html', {
+        'project': project
+    })
+
 
 def about(request):
     about = AboutPage.objects.first()

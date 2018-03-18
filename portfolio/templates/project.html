@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="content project-detail">
+          <h2>{{ project.title }}</h2>
+
+          <img src="{{ project.featured_image.url }}" alt="{{ project.title }}">
+
+          {% if project.description %}
+            <p>{{ project.description }}</p>
+          {% endif %}
+        </div>
+{% endblock content %}
