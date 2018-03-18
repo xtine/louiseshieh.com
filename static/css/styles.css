@@ -79,6 +79,16 @@ nav li.current {
 }
 
 
+.about-image {
+  padding-right: 30px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.about-body {
+  display: inline-block;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {
     padding: 30px;

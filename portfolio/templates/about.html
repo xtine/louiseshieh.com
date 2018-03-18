@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div class="content about">
+        {% if about.image %}
+        <div class="about-image">
+          <img src="{{ about.image.url }}" alt="">
+        </div>
+        {% endif %}
+        <div class="about-body">
+          {{ about.body }}
+        </div>
+      </div>
+{% endblock content %}

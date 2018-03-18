@@ -21,8 +21,16 @@
 
       <nav>
         <ul>
+          {% if page == 'home' %}
           <li class="current">Work</li>
-          <li>About</li>
+          {% else %}
+          <li><a href="{% url 'home' %}">Work</a></li>
+          {% endif %}
+          {% if page == 'about' %}
+          <li class="current">About</li>
+          {% else %}
+          <li><a href="{% url 'about' %}">About</a></li>
+          {% endif %}
         </ul>
       </nav>
 
