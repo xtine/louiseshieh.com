@@ -101,14 +101,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-# password protect site
-if 'LOCKDOWN_PASSWORD' in os.environ:
-    LOCKDOWN_PASSWORDS = (os.environ['LOCKDOWN_PASSWORD'])
-else:
-    LOCKDOWN_ENABLED = False
+LOCKDOWN_ENABLED = False
 
 
-# local development
 try:
     from .local_settings import *
 except ImportError:
