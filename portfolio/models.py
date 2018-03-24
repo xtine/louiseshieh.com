@@ -10,7 +10,6 @@ class Project(models.Model):
     title = models.CharField(max_length=200, blank=False)
     description = models.TextField(blank=True)
     home_page_image = models.ImageField(upload_to='project/', blank=False)
-    featured_image = models.ImageField(upload_to='project/', blank=False)
     home_page_order = models.IntegerField(blank=False)
 
     def home_page_image_preview(self):
@@ -22,17 +21,21 @@ class Project(models.Model):
     home_page_image_preview.short_description = 'Home page image preview'
     home_page_image_preview.allow_tags = True
 
-    def featured_image_preview(self):
-        if self.featured_image:
-            return mark_safe("""<img src="%s%s" />""" % (settings.MEDIA_URL, self.featured_image))
-        else:
-            return ""
-
-    featured_image_preview.short_description = 'Featured image preview'
-    featured_image_preview.allow_tags = True
-
     def __str__(self):
         return self.title
+
+
+class ProjectMedia(models.Model):
+    project = models.ForeignKey('Project')
+    image = models.ImageField(upload_to='project/', blank=True, help_text='Uploading an image will override the video embed.')
+    video = models.CharField(max_length=100, blank=True, help_text='Vimeo ID.<br>Example: ID is 123 if url is https://www.vimeo.com/123')
+    copy = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name_plural = 'Project Media'
+
+    def __str__(self):
+        return self.project.title
 
 
 class AboutPage(models.Model):
@@ -53,3 +56,4 @@ class AboutPage(models.Model):
 
     def __str__(self):
         return 'About Page'
+

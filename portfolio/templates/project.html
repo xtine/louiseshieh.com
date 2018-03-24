@@ -3,11 +3,28 @@
 {% block content %}
         <div class="content project-detail">
           <h2>{{ project.title }}</h2>
-
-          <img src="{{ project.featured_image.url }}" alt="{{ project.title }}">
-
           {% if project.description %}
             <p>{{ project.description }}</p>
           {% endif %}
+
+          <ul>
+          {% for media in project.projectmedia_set.all %}
+            <li>
+              <div class="media">
+                {% if media.image %}
+                <img src="{{ media.image.url }}" alt="">
+                {% else %}
+                <div class="embed-container">
+                  <iframe src="https://player.vimeo.com/video/{{ media.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                {% endif %}
+              </div>
+              <div class="copy">
+                {{ media.copy }}
+              </div>
+            </li>
+          {% endfor %}
+          </ul>
+
         </div>
 {% endblock content %}
