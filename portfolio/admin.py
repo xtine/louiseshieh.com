@@ -34,7 +34,7 @@ class ProjectMediaInline(admin.StackedInline):
 
 # Admin for Projects
 class ProjectAdmin(admin.ModelAdmin):
-    fields = ('title', 'description', 'home_page_image', 'home_page_image_preview')
+    fields = ('title', 'description', 'home_page_image', 'home_page_image_preview', 'home_page_order')
     readonly_fields = ('home_page_image_preview',)
     list_display = ('title', 'home_page_list_image', 'home_page_order')
     inlines = (ProjectMediaInline,)
