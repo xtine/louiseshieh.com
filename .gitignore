@@ -1,10 +1,14 @@
+# virtualenv
 bin
 lib
 
+# local files
 db.sqlite3
-
 local_settings.py
+debug.log
 
+# ignore local uploaded files
 media
 
+# OS X
 .DS_Store
