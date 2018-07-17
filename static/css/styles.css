@@ -132,6 +132,7 @@ nav li.current {
 }
 
 .project-detail .copy {
+  width: 25%;
   padding: 0 20px;
 }
 
