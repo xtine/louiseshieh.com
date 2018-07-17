@@ -144,6 +144,7 @@ nav li.current {
 }
 
 .about-body {
+  width: 25%;
   display: inline-block;
 }
 
