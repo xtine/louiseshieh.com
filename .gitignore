@@ -10,5 +10,8 @@ debug.log
 # ignore local uploaded files
 media
 
+# collectstatic
+staticfiles/
+
 # OS X
 .DS_Store
