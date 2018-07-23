@@ -200,6 +200,20 @@ nav li.current {
   }
 
   .project-detail ul li .copy {
+    width: 100%;
     padding: 20px 0;
+  }
+
+  .about-image {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .about-body {
+    width: 100%;
   }
 }
