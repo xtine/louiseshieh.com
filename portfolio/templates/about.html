@@ -10,7 +10,7 @@
         </div>
         {% endif %}
         <div class="about-body">
-          {{ about.body }}
+          {{ about.body|safe }}
         </div>
       </div>
 {% endblock content %}
